@@ -1,0 +1,40 @@
+// Navbar
+.nav {
+    .container {
+        @include flex(start);
+    }
+    color: darken($color-white, 20%);
+    &__logo {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: $color-primary;
+        @include flex(center);
+        margin-right: 35px;
+    }
+    &__list {
+        @include flex();
+        @include responsive(desktop){
+            display: none;
+        }
+    }
+    &__item {
+        margin-right: 30px;
+    }
+    &__right {
+        margin-left: auto;
+        color: $color-white;
+        @include responsive(desktop){
+            display: none;
+        }
+        @include responsive(lg-desktop) {
+            display: none;
+        }
+    }
+        &__link {
+        @include trans(color);
+        &:hover {
+            color: $color-white;
+        }
+    }
+}

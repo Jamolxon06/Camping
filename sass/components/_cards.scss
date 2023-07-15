@@ -1,0 +1,81 @@
+.feature-card {
+    background-color: $color-white;
+    text-align: center;
+    @include responsive(desktop){
+        padding: 50px 30px;  
+        margin-top: 20px;
+    }
+    @include responsive(phone){
+        padding: 50px 70px;  
+        margin-top: 20px;
+    }
+    border-radius: $border-radius;
+    padding: 50px 20px;
+    @include trans(transform);
+    cursor: default;
+    &:hover {
+        transform: translateY(-10px) scale(1.05);
+    }
+    .feature-title {
+        margin-top: 15px;
+    }
+    .feature-text {
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .feature-list {
+        flex-wrap: wrap;
+    }
+}
+.card {
+    background-color: $color-white;
+    border-radius: $border-radius;
+    padding: 25px;
+    @include responsive(desktop){
+        padding: 40px; 
+    }
+    &__header {
+        position: relative;
+    }
+    &__btn-like {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        top: 12px;
+        right: 12px;
+        border-radius: 14px;
+        background-color: $color-white;
+        @include flex();
+    }
+    &__img {
+        border-radius: $border-radius;
+    }
+    &__price {
+        width: 135px;
+        padding: 15px;
+        background-color: $color-white;
+        border-radius: 14px;
+        color: $color-primary;
+        transform: translateY(-50%);
+        margin: 0 auto;
+    }
+    &__title {
+        font-size: 16px;
+    }
+    &__text {
+        margin-top: 10px;
+        margin-bottom: 25px;
+        font-size: 16px;
+    }
+    &__link {
+        color: $color-grey;
+        background-color: lighten($color-grey, 35%);
+        padding: 8px 25px;
+        @include trans();
+        border-radius: 25px;
+        &:hover {
+            background-color: $color-primary;
+            color: $color-white;
+        }
+    }
+}

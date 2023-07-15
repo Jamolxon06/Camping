@@ -1,0 +1,31 @@
+// Default styles
+*, *::after, *::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: $bg-color-1;
+}
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+input {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
